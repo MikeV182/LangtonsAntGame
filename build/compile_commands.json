@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/LangtonsAnt.dir/main.cpp.o -c /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/main.cpp",
+  "file": "/home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/main.cpp",
+  "output": "CMakeFiles/LangtonsAnt.dir/main.cpp.o"
+}
+]

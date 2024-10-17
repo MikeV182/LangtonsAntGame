@@ -1,0 +1,3 @@
+/home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/build/CMakeFiles/LangtonsAnt.dir
+/home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/build/CMakeFiles/edit_cache.dir
+/home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/build/CMakeFiles/rebuild_cache.dir
