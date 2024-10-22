@@ -1,3 +1,6 @@
+#ifndef ANT_H
+#define ANT_H
+
 #include <iostream>
 
 class Ant {
@@ -25,3 +28,5 @@ public:
         }
     }
 };
+
+#endif

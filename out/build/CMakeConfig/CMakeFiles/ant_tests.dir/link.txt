@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/ant_tests.dir/test/AntTests.cpp.o -o ant_tests  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 

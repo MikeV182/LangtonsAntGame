@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/universe_tests.dir/test/UniverseTests.cpp.o -o universe_tests  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 

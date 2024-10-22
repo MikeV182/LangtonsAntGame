@@ -1,3 +1,6 @@
+#ifndef UNIVERSE_H
+#define UNIVERSE_H
+
 #include <set>
 #include <vector>
 #include <iostream>
@@ -59,3 +62,5 @@ public:
         }
     }
 };
+
+#endif

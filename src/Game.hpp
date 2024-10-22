@@ -1,3 +1,6 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include <iostream>
 #include <string>
 
@@ -48,3 +51,5 @@ public:
         std::cout << "  help            - show this help message\n";
     }
 };
+
+#endif

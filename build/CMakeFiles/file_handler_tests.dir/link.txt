@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/file_handler_tests.dir/test/FileHandlerTests.cpp.o -o file_handler_tests  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 

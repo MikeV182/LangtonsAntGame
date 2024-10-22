@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -129,6 +184,110 @@ LangtonsAnt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LangtonsAnt.dir/build.make CMakeFiles/LangtonsAnt.dir/build
 .PHONY : LangtonsAnt/fast
 
+#=============================================================================
+# Target rules for targets named ant_tests
+
+# Build rule for target.
+ant_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ant_tests
+.PHONY : ant_tests
+
+# fast build rule for target.
+ant_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ant_tests.dir/build.make CMakeFiles/ant_tests.dir/build
+.PHONY : ant_tests/fast
+
+#=============================================================================
+# Target rules for targets named universe_tests
+
+# Build rule for target.
+universe_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 universe_tests
+.PHONY : universe_tests
+
+# fast build rule for target.
+universe_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/universe_tests.dir/build.make CMakeFiles/universe_tests.dir/build
+.PHONY : universe_tests/fast
+
+#=============================================================================
+# Target rules for targets named file_handler_tests
+
+# Build rule for target.
+file_handler_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 file_handler_tests
+.PHONY : file_handler_tests
+
+# fast build rule for target.
+file_handler_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_handler_tests.dir/build.make CMakeFiles/file_handler_tests.dir/build
+.PHONY : file_handler_tests/fast
+
+#=============================================================================
+# Target rules for targets named game_tests
+
+# Build rule for target.
+game_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_tests
+.PHONY : game_tests
+
+# fast build rule for target.
+game_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/build
+.PHONY : game_tests/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +312,102 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LangtonsAnt.dir/build.make CMakeFiles/LangtonsAnt.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test/AntTests.o: test/AntTests.cpp.o
+.PHONY : test/AntTests.o
+
+# target to build an object file
+test/AntTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ant_tests.dir/build.make CMakeFiles/ant_tests.dir/test/AntTests.cpp.o
+.PHONY : test/AntTests.cpp.o
+
+test/AntTests.i: test/AntTests.cpp.i
+.PHONY : test/AntTests.i
+
+# target to preprocess a source file
+test/AntTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ant_tests.dir/build.make CMakeFiles/ant_tests.dir/test/AntTests.cpp.i
+.PHONY : test/AntTests.cpp.i
+
+test/AntTests.s: test/AntTests.cpp.s
+.PHONY : test/AntTests.s
+
+# target to generate assembly for a file
+test/AntTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ant_tests.dir/build.make CMakeFiles/ant_tests.dir/test/AntTests.cpp.s
+.PHONY : test/AntTests.cpp.s
+
+test/FileHandlerTests.o: test/FileHandlerTests.cpp.o
+.PHONY : test/FileHandlerTests.o
+
+# target to build an object file
+test/FileHandlerTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_handler_tests.dir/build.make CMakeFiles/file_handler_tests.dir/test/FileHandlerTests.cpp.o
+.PHONY : test/FileHandlerTests.cpp.o
+
+test/FileHandlerTests.i: test/FileHandlerTests.cpp.i
+.PHONY : test/FileHandlerTests.i
+
+# target to preprocess a source file
+test/FileHandlerTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_handler_tests.dir/build.make CMakeFiles/file_handler_tests.dir/test/FileHandlerTests.cpp.i
+.PHONY : test/FileHandlerTests.cpp.i
+
+test/FileHandlerTests.s: test/FileHandlerTests.cpp.s
+.PHONY : test/FileHandlerTests.s
+
+# target to generate assembly for a file
+test/FileHandlerTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_handler_tests.dir/build.make CMakeFiles/file_handler_tests.dir/test/FileHandlerTests.cpp.s
+.PHONY : test/FileHandlerTests.cpp.s
+
+test/GameTests.o: test/GameTests.cpp.o
+.PHONY : test/GameTests.o
+
+# target to build an object file
+test/GameTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/test/GameTests.cpp.o
+.PHONY : test/GameTests.cpp.o
+
+test/GameTests.i: test/GameTests.cpp.i
+.PHONY : test/GameTests.i
+
+# target to preprocess a source file
+test/GameTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/test/GameTests.cpp.i
+.PHONY : test/GameTests.cpp.i
+
+test/GameTests.s: test/GameTests.cpp.s
+.PHONY : test/GameTests.s
+
+# target to generate assembly for a file
+test/GameTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/test/GameTests.cpp.s
+.PHONY : test/GameTests.cpp.s
+
+test/UniverseTests.o: test/UniverseTests.cpp.o
+.PHONY : test/UniverseTests.o
+
+# target to build an object file
+test/UniverseTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/universe_tests.dir/build.make CMakeFiles/universe_tests.dir/test/UniverseTests.cpp.o
+.PHONY : test/UniverseTests.cpp.o
+
+test/UniverseTests.i: test/UniverseTests.cpp.i
+.PHONY : test/UniverseTests.i
+
+# target to preprocess a source file
+test/UniverseTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/universe_tests.dir/build.make CMakeFiles/universe_tests.dir/test/UniverseTests.cpp.i
+.PHONY : test/UniverseTests.cpp.i
+
+test/UniverseTests.s: test/UniverseTests.cpp.s
+.PHONY : test/UniverseTests.s
+
+# target to generate assembly for a file
+test/UniverseTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/universe_tests.dir/build.make CMakeFiles/universe_tests.dir/test/UniverseTests.cpp.s
+.PHONY : test/UniverseTests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,11 +415,36 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... LangtonsAnt"
+	@echo "... ant_tests"
+	@echo "... file_handler_tests"
+	@echo "... game_tests"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... universe_tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test/AntTests.o"
+	@echo "... test/AntTests.i"
+	@echo "... test/AntTests.s"
+	@echo "... test/FileHandlerTests.o"
+	@echo "... test/FileHandlerTests.i"
+	@echo "... test/FileHandlerTests.s"
+	@echo "... test/GameTests.o"
+	@echo "... test/GameTests.i"
+	@echo "... test/GameTests.s"
+	@echo "... test/UniverseTests.o"
+	@echo "... test/UniverseTests.i"
+	@echo "... test/UniverseTests.s"
 .PHONY : help
 
 
