@@ -145,4 +145,5 @@ CMakeFiles/LangtonsAnt.dir/main.cpp.o: \
  /usr/include/c++/14/bits/uniform_int_dist.h \
  /usr/include/c++/14/bits/stl_tempbuf.h \
  /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Ant.hpp \
- /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Game.hpp
+ /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Game.hpp \
+ /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/FileHandler.hpp

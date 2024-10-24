@@ -21,7 +21,7 @@ void parseArgs(int argc, char* argv[], int& iterations, std::string& inputFile, 
         }
     }
 }
-
+ 
 int main(int argc, char* argv[]) {
     int iterations = 0;
     std::string inputFile;

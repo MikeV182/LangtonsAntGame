@@ -48,15 +48,13 @@ public:
         std::cout << "Universe: " << iteration << " iterations\n";
         for (int y = 0; y < height; ++y) {
             for (int x = 0; x < width; ++x) {
-                if (isPainted(x, y)) {
-                    std::cout << "#";
-                } else if (std::any_of(ants.begin(), ants.end(), [&](const Ant& ant) {
-                    return ant.x == x && ant.y == y;
-                })) {
+                if (std::any_of(ants.cbegin(), ants.cend(), [&](const Ant& ant) {return ant.x == x && ant.y == y;})) {
                     std::cout << "A";
+                } else if (isPainted(x, y)) {
+                    std::cout << "#";
                 } else {
                     std::cout << ".";
-                }
+                }                
             }
             std::cout << "\n";
         }

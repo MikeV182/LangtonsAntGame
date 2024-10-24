@@ -244,4 +244,9 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: \
  /usr/include/c++/14/bits/stl_heap.h \
  /usr/include/c++/14/bits/uniform_int_dist.h \
  /usr/include/c++/14/pstl/glue_algorithm_defs.h \
- /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/test/../src/Ant.hpp
+ /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/test/../src/Ant.hpp \
+ /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/test/../src/FileHandler.hpp \
+ /usr/include/c++/14/fstream \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc

@@ -5,6 +5,7 @@
 #include <string>
 
 #include "Universe.hpp"
+#include "FileHandler.hpp"
 
 class Game {
 public:
@@ -40,7 +41,7 @@ public:
 
     void dump(const std::string& filename) {
         std::cout << "Saving universe to " << filename << "...\n";
-        // Реализация сохранения состояния в файл
+        FileHandler::saveUniverse(universe, filename);
     }
 
     void printHelp() {
