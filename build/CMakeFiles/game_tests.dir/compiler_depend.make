@@ -24,6 +24,7 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: /home/mike/Documents/Cpp/lectTas
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Ant.hpp \
+  /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/FileHandler.hpp \
   /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Game.hpp \
   /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Universe.hpp \
   /usr/include/alloca.h \
@@ -164,6 +165,7 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: /home/mike/Documents/Cpp/lectTas
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
   /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/fstream.tcc \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
   /usr/include/c++/14/bits/hash_bytes.h \
@@ -262,6 +264,7 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: /home/mike/Documents/Cpp/lectTas
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/fstream \
   /usr/include/c++/14/functional \
   /usr/include/c++/14/initializer_list \
   /usr/include/c++/14/iomanip \
@@ -299,8 +302,10 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: /home/mike/Documents/Cpp/lectTas
   /usr/include/c++/14/variant \
   /usr/include/c++/14/vector \
   /usr/include/c++/14/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/c++allocator.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/c++locale.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/ctype_base.h \
@@ -378,10 +383,6 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: /home/mike/Documents/Cpp/lectTas
 
 /usr/include/stdlib.h:
 
-/usr/include/sys/ucontext.h:
-
-/usr/include/stdc-predef.h:
-
 /usr/include/strings.h:
 
 /usr/include/signal.h:
@@ -422,7 +423,15 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: /home/mike/Documents/Cpp/lectTas
 
 /usr/include/c++/14/x86_64-redhat-linux/bits/ctype_inline.h:
 
+/usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h:
+
 /usr/include/c++/14/x86_64-redhat-linux/bits/c++allocator.h:
+
+/usr/include/sys/ucontext.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h:
 
 /usr/include/c++/14/x86_64-redhat-linux/bits/atomic_word.h:
 
@@ -464,11 +473,19 @@ CMakeFiles/game_tests.dir/test/GameTests.cpp.o: /home/mike/Documents/Cpp/lectTas
 
 /usr/include/c++/14/functional:
 
+/usr/include/c++/14/fstream:
+
 /usr/include/c++/14/ext/type_traits.h:
 
 /usr/include/c++/14/ext/string_conversions.h:
 
 /usr/include/c++/14/ext/concurrence.h:
+
+/usr/include/c++/14/ext/atomicity.h:
+
+/usr/include/c++/14/ext/alloc_traits.h:
+
+/usr/include/bits/types/wint_t.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest-typed-test.h:
 
@@ -566,12 +583,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-typed-test.h:
 
 /usr/include/bits/setjmp.h:
 
-/usr/include/asm-generic/errno.h:
-
-/usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h:
-
-/usr/include/c++/14/bits/predefined_ops.h:
-
 /usr/include/c++/14/bits/ios_base.h:
 
 /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Universe.hpp:
@@ -636,6 +647,14 @@ _deps/googletest-src/googletest/include/gtest/gtest_prod.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h:
 
+_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/c++/14/streambuf:
+
+_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
+
 _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
 
 /usr/include/bits/statx-generic.h:
@@ -645,8 +664,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
 /usr/include/c++/14/backward/binders.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
-
-/usr/include/c++/14/ext/atomicity.h:
 
 /usr/include/bits/types.h:
 
@@ -672,10 +689,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
 
 /home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/Game.hpp:
 
-/usr/include/bits/sigcontext.h:
-
-/usr/include/c++/14/cerrno:
-
 _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/14/bits/uses_allocator.h:
@@ -695,10 +708,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
 /usr/include/c++/14/bits/memoryfwd.h:
 
 /usr/include/bits/byteswap.h:
-
-/usr/include/bits/unistd_ext.h:
-
-/usr/include/c++/14/bits/allocated_ptr.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h:
 
@@ -742,13 +751,11 @@ _deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
-/usr/include/c++/14/streambuf:
+/usr/include/asm-generic/errno.h:
 
-_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
+/usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h:
 
-_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
-
-/usr/include/bits/select.h:
+/usr/include/c++/14/bits/predefined_ops.h:
 
 /usr/include/bits/types/siginfo_t.h:
 
@@ -830,6 +837,14 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/c++/14/bits/stl_iterator_base_funcs.h:
 
+/usr/include/c++/14/bits/allocated_ptr.h:
+
+/usr/include/bits/unistd_ext.h:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/c++/14/cerrno:
+
 /usr/include/bits/wctype-wchar.h:
 
 /usr/include/stdio.h:
@@ -890,6 +905,12 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/c++/14/bits/exception_defines.h:
 
+/usr/include/c++/14/bits/fstream.tcc:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/c++/14/bits/stl_map.h:
+
 /usr/include/c++/14/set:
 
 /usr/include/c++/14/bits/functexcept.h:
@@ -897,6 +918,8 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 /usr/include/c++/14/bits/hashtable.h:
 
 /usr/include/c++/14/bits/hashtable_policy.h:
+
+/home/mike/Documents/Cpp/lectTask2/LangtonsAntGame/src/FileHandler.hpp:
 
 /usr/include/c++/14/bits/invoke.h:
 
@@ -994,10 +1017,6 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 
 /usr/include/c++/14/bits/stl_iterator_base_types.h:
 
-/usr/include/bits/sigaction.h:
-
-/usr/include/c++/14/bits/stl_map.h:
-
 /usr/include/c++/14/bits/stl_relops.h:
 
 /usr/include/linux/stddef.h:
@@ -1051,7 +1070,3 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h:
 /usr/include/c++/14/bits/align.h:
 
 /usr/include/c++/14/ext/aligned_buffer.h:
-
-/usr/include/bits/types/wint_t.h:
-
-/usr/include/c++/14/ext/alloc_traits.h:

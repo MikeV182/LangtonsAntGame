@@ -57,9 +57,9 @@ public:
             throw std::runtime_error("Cannot open file for writing.");
         }
 
-        outfile << "#N My Universe\n";
-        outfile << "#S " << universe.width << " " << universe.height << "\n";
-        outfile << "#A " << universe.ants.size() << "\n";
+        outfile << "My Universe\n";
+        outfile << universe.width << " " << universe.height << "\n";
+        outfile << universe.ants.size() << "\n";
         for (const auto& ant : universe.ants) {
             outfile << ant.x << " " << ant.y << " " << ant.direction << "\n";
         }

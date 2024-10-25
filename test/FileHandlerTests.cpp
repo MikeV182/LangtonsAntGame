@@ -2,11 +2,10 @@
 #include "../src/FileHandler.hpp"
 
 TEST(FileHandlerTest, LoadUniverse) {
-    // Создаем тестовый файл для проверки загрузки
     std::ofstream outfile("test_universe.txt");
-    outfile << "#N Test Universe\n";
-    outfile << "#S 5 5\n";
-    outfile << "#A 1\n";
+    outfile << "Test Universe\n";
+    outfile << "5 5\n";
+    outfile << "1\n";
     outfile << "2 2 1\n";
     outfile << "1 1\n";
     outfile.close();
@@ -32,13 +31,13 @@ TEST(FileHandlerTest, SaveUniverse) {
     std::ifstream infile("output_universe.txt");
     std::string line;
     std::getline(infile, line);
-    EXPECT_EQ(line, "#N My Universe");
+    EXPECT_EQ(line, "My Universe");
 
     std::getline(infile, line);
-    EXPECT_EQ(line, "#S 5 5");
+    EXPECT_EQ(line, "5 5");
 
     std::getline(infile, line);
-    EXPECT_EQ(line, "#A 1");
+    EXPECT_EQ(line, "1");
 
     std::getline(infile, line);
     EXPECT_EQ(line, "2 2 1");

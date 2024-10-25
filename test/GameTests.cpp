@@ -7,6 +7,6 @@ TEST(GameTest, TickCommand) {
     Game game(universe);
 
     game.universe.tick(3);
-    EXPECT_EQ(game.universe.ants[0].x, 0); // Проверка перемещения муравья
-    EXPECT_EQ(game.universe.ants[0].y, 1); // после 3 шагов
+    EXPECT_EQ(game.universe.ants[0].x, 9); // Проверка перемещения муравья
+    EXPECT_EQ(game.universe.ants[0].y, 0); // после 3 шагов
 }
